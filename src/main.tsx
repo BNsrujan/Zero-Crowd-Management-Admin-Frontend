@@ -1,8 +1,9 @@
 import { createBrowserRouter, RouterProvider } from "react-router";
 
 import ReactDOM from "react-dom/client";
-import App from "./App";
-import "./index.css";
+import App from "@/App";
+import "@/index.css";
+
 const router = createBrowserRouter([
   {
     path: "/log",
