@@ -1,13 +1,25 @@
-import "./App.css";
+import { createBrowserRouter, RouterProvider } from "react-router";
+import Healthcheck from "@/pages/healthcheck/healthcheck";
 
-import { Button } from "@/components/ui/button";
+export default function APP() {
+  const router = createBrowserRouter([
+    {
+      path: "/monkey",
+      element: <h1>hellow</h1>,
+    },
+    {
+      path: "/",
+      element: <h1>hello</h1>,
+    },
+    {
+      path: "/healthCheck",
+      element: <Healthcheck />,
+    },
+  ]);
 
-function App() {
   return (
-    <div className="flex flex-col items-center justify-center min-h-svh">
-      <Button>Click me</Button>
+    <div>
+      <RouterProvider router={router} />
     </div>
   );
 }
-
-export default App;
